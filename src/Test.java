@@ -17,11 +17,9 @@ public class Test {
         prep.setString(1, "Turing");
         prep.setString(2, "computers");
         prep.addBatch();
-        for (int i = 0; i < 20000000; i++) {
-            prep.setString(1, "Wittgenstein");
-            prep.setString(2, "smartypants");
-            prep.addBatch();
-        }
+        prep.setString(1, "Wittgenstein");
+        prep.setString(2, "smartypants");
+        prep.addBatch();
 
         conn.setAutoCommit(false);
         prep.executeBatch();
